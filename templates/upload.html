@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузить изображение</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Загрузите новое изображение для распознавания текста:</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <button type="submit">Загрузить файл</button>
+    </form>
+</body>
+</html>
