@@ -1,0 +1,1 @@
+Для запуска проекта нужно в терминале прописать python app.py и указать в файле config.py в месте SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:admin@localhost/Photo' имя пользователя базы PostgreSQL, пароль и имя базы
